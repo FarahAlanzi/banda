@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+ <html >
+    <head>
+        <meta charset="UTF-8">
+        <title>PANDA</title>
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+            li {
+                margin-bottom: 10px;
+                font-size: 30px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navv" style="width: 100%;">
+              <ul class="navv" style="list-style: none; margin:10px; float: left;" >
+                <li style="  padding-left: 10PX;"><a href="index.html" >Home</a></li>
+                <li><a href="categ.html" >Shop with Us</a></li>
+                <li><a href="groubMember.html" >Group Member</a></li>
+                <li><a href="cotact.html" >Contact Us</a></li>
+                <li><a href="team.html" >Team</a></li>
+                <li><a href="about.html" >About PANDA</a></li>
+               </ul>
+            </nav>
+        </header>
+        <h1 style="text-align: center;">Group Members</h1>
+        <ul id="memberList" style=" list-style-type: none; margin-bottom: 80px; text-align: center;">
+        </ul>
+        <div class="groupInfo" style="margin: auto; text-align: center; width: 40%;">
+            <h1>More Details About Group Members</h1>
+            <table style="margin: auto; border: 1px solid #fff; width: 100%;" border="1">
+                <thead>
+                    <th>Name</th>
+                    <th>ID</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Amani Raja Al-anzi</td>
+                        <td>201456222</td>
+                    </tr>
+                    <tr>
+                        <td>Farah mohammed Al-anzi</td>
+                        <td>201456222</td>
+                    </tr>
+                    <tr>
+                        <td>Tagreed rahil Al-hawiti</td>
+                        <td>201456222</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+            const members = ['Amani Raja Al-anzi', 'Farah mohammed Al-anzi', 'Tagreed rahil Al-hawiti'];
+            const memberList = document.getElementById('memberList');
+
+            function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+            }
+
+            function displayRandomMembers() {
+            const shuffledMembers = shuffleArray(members);
+
+            memberList.innerHTML = '';
+
+            shuffledMembers.forEach((member) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = member;
+                memberList.appendChild(listItem);
+            });
+            }
+
+            displayRandomMembers();
+
+        </script>
+
+
+
+
+
+
+
+         <footer>
+            <h1  >All reights reserved for   <img class="img" src="images/pa.png" alt="imgs" style="width:7%; " >   &#169; 2024</h1>
+          </footer>
+
+    </body>
+
+ </html>

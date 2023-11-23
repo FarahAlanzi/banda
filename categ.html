@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+ <html >
+    <head>
+
+        <meta charset="UTF-8">
+        <title>PANDA</title>
+        <link rel="stylesheet" href="css/style.css">
+
+<style media="screen">
+
+
+.iii{
+    border: solid 4px #70bc1f;
+    border-radius: 16px;
+    box-shadow: 5px 5px 20px rgba(0,0, 0, 0.4);
+}
+
+</style>
+
+<script src="js/jquery-1.12.1.js"> </script>
+<script src="js/jquery-ui.min.js"> </script>
+
+
+
+
+
+    </head>
+    <body>
+          <header>
+
+            <nav class="navv" style="width: 100%;">
+              <ul class="navv" style="list-style: none; margin:10px; float: left;" >
+                <li style="  padding-left: 10PX;"><a href="index.html" >Home</a></li>
+                <li><a href="categ.html" >Shop with Us</a></li>
+                <li><a href="groubMember.html" >Group Member</a></li>
+                <li><a href="cotact.html" >Contact Us</a></li>
+                <li><a href="team.html" >Team</a></li>
+                <li><a href="about.html" >About PANDA</a></li>
+               </ul>
+            </nav>
+        </header>
+        
+        <div style="width:100%; display: flex; text-align:center; margin-left:150px;">
+          <div style="width:40%; ">
+            <div class="zoom">
+                <button class="btnn" type="button" onclick="zoomin()">
+                   In Zoom
+                </button>
+                <button class="btnn" type="button" onclick="zoomout()">
+                  Out Zoom
+                </button>
+                <div class="box" style="margin:10px;">
+                  <img class="iii" src="images/zoom2.jpg"	id="geeks" width="90%" GFG="250">
+                </div>
+              </div>
+          </div>
+          <div style="width:40%; background-color: #afsdsa;">
+            <div class="zoom">
+              <button class="btnn" type="button" onclick="zoomin1()">
+                 In Zoom
+              </button>
+              <button class="btnn" type="button" onclick="zoomout1()">
+                Out Zoom
+              </button>
+                <div class="box " style="margin:10px;">
+                  <img class="iii" src="images/explo.png"	id="geeks1" width="80%" GFG="250">
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+         <footer>
+            <h1>All reights reserved for   <img class="img" src="images/pa.png" alt="imgs" style="width:7%; " >   &#169; 2024</h1>
+          </footer>
+
+          <script type="text/javascript">
+      			function zoomin() {
+      				var GFG = document.getElementById("geeks");
+      				var currWidth = GFG.clientWidth;
+      				GFG.style.width = (currWidth + 100) + "px";
+      			}
+
+      			function zoomout() {
+      				var GFG = document.getElementById("geeks");
+      				var currWidth = GFG.clientWidth;
+      				GFG.style.width = (currWidth - 100) + "px";
+      			}
+
+            function zoomin1() {
+              var GFG = document.getElementById("geeks1");
+              var currWidth = GFG.clientWidth;
+              GFG.style.width = (currWidth + 100) + "px";
+            }
+
+            function zoomout1() {
+              var GFG = document.getElementById("geeks1");
+              var currWidth = GFG.clientWidth;
+              GFG.style.width = (currWidth - 100) + "px";
+            }
+      		</script>
+    </body>
+
+ </html>
